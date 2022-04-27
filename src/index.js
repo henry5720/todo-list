@@ -11,7 +11,9 @@ import List from "./pages/List";
 
 
 const container = document.getElementById('root');
-const root = createRoot(container); // createRoot(container!) if you use TypeScript
+const root = createRoot(container);
+
+// [使用] BrowserRouter
 root.render(
     <React.StrictMode>
         <BrowserRouter>

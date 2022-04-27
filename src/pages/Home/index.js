@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from 'react-router-dom'
 
 import "../../scss/Home.scss";
 
-// 展示組件(點擊換頁)
+// [Home組件] 點擊跳轉/link (Link 會渲染成 a)
 const Home=function(){
     return (
         <div className="home">

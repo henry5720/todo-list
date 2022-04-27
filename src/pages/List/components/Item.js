@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-
+// [Item組件] 從[List組件]接收 data 處理 -> 傳給[Lis組件]
 const Item=function({listData, del}){
     return (
         <ul className="item">
@@ -14,6 +14,7 @@ const Item=function({listData, del}){
     );
 }
 
+// [Lis組件]個別id 過濾 [Lis組件]全部id -> 留下不相等的 -> 使用setData
 const Lis=function({del, id, note}){
     function delNote(){
         // del={setData()}
@@ -34,7 +35,5 @@ const Lis=function({del, id, note}){
         </li>
     );
 }
-
-
 
 export default Item;
