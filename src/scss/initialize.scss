@@ -3,15 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-#root{
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-
-  width: 100%;
-  height: 100vh;
-  background-color: #061444;
-}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -26,6 +17,17 @@ body {
       monospace;
   }
   
+  #root{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    
+    width: 100%;
+    height: 100vh;
+    background-color: #061444;
+  }
+
   a {
     text-decoration: none;
   }
+
