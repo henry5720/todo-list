@@ -1,35 +1,29 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { DataContext } from "..";
 import {v4} from "uuid";
 
-// [Edit組件] 設置note -> 傳給[List組件]
-const Edit=function({listData, add}){
-    const [note, setNote]=useState("");
+import {addDb, getDb} from "../../../utils/firebase"
+
+/* ==================== [Edit組件] ==================== */ 
+const Edit=function(){
+    const data=useContext(DataContext);
 
     // [onChange] 紀錄 value
     function getNote(e){
-        setNote(e.target.value);
+        data.setNote(e.target.value);
     }
 
     // [setData] 紀錄 id(uuid) & note
     function addNote(){
-        if(note){
-            add((prev)=>{
-                return [
-                    ...prev,
-                    {
-                        id: v4(),
-                        note,
-                    }
-                ];
-            });    
-        }
-    }
-    // console.log("note:", note);
-    // console.log("listData:", listData);
+        const id=v4();
+        addDb(id, data.note);
+        data.setNote("");
+        getDb(data.setData);
 
+    }
     return (
         <div className="edit">
-            <input value={note} onChange={getNote} type="text" placeholder="write something"/>
+            <input value={data.note} onChange={getNote} type="text" placeholder="write something"/>
             <button onClick={addNote} className="add">add</button>
         </div>
     );

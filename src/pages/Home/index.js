@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import "../../scss/Home.scss";
 
-// [Home組件] 點擊跳轉/link (Link 會渲染成 a)
+/* ==================== [Home組件] ==================== */ 
 const Home=function(){
     return (
         <div className="home">
@@ -13,6 +13,7 @@ const Home=function(){
             </Link>
         </div>
     );
+    // 點擊跳轉 /link (Link 會渲染成 a)
 }
 
 export default Home;
