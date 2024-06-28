@@ -1,10 +1,10 @@
-# simple todo list (React & firebaase)
-## getting started
-#### [simple todo list](https://test-36fea.firebaseapp.com)
+# Simple Todo List (React & Firebaase)
+## Getting Started
+### Live Demo : [simple todo list](https://test-36fea.firebaseapp.com)
 
-## introduce
+## Introduce
 ![](https://github.com/henry5720/todo-list/blob/develop/src/imgs/introduce.gif)
 
-## structure
+## Structure
 ![](https://i.imgur.com/v7rFVLl.png)
 
